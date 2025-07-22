@@ -54,9 +54,13 @@ install_if_missing ffmpeg ffmpeg
 #TODO install mac/windows alternatives based on system version 
 install_if_missing v4l-utils  v4l2-ctl 
 
+# install libusb for ps3 camera support
+install_if_missing libudev-dev
+
 # Upgrade pip and install numpy
 pip install --upgrade pip
-pip install numpy scipy flask Flask-SocketIO Ruckig flask-cors scikit-spatial line-profiler PyQt6 opencv-python-headless imutils pyvirtualcam
+pip install numpy scipy flask Flask-SocketIO Ruckig flask-cors scikit-spatial line-profiler PyQt6 opencv-python-headless imutils pyvirtualcam PyQt5 moderngl pyrr
+pip install Cython # required for pseyepy
 
 echo "Virtual environment ready and numpy installed."  
 

@@ -1,0 +1,224 @@
+{
+    "camera_params": [
+      {
+        "intrinsic_matrix": [
+          [
+            542.83400972,
+            0,
+            338.38531616
+          ],
+          [
+            0,
+            542.83400972,
+            269.98450649
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "distortion_coef": [
+          [
+            -8.22485165e-02,
+            -1.14028726e+00,
+            8.03943932e-03,
+            2.56985568e-03,
+            6.44216046e+00
+          ]
+        ],
+        "rotation": 0,
+        "id": 1,
+        "name": "USB Camera-B4.09.24.1 (usb-0000:00:14.0-7.4):",
+        "width": 320,
+        "height": 240,
+        "connected": true,
+        "calibrated": false,
+        "added": true,
+        "manual_mode": 1,
+        "auto_exposure_mode": null,
+        "min_exposure": 1,
+        "max_exposure": 253,
+        "exposure": 253,
+        "gain": 63
+      },
+      {
+        "intrinsic_matrix": [
+          [
+            587.11334008,
+            0,
+            280.84206724
+          ],
+          [
+            0,
+            587.11334008,
+            240.7599017
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "distortion_coef": [
+          [
+            -0.42295823,
+            1.39211703,
+            0.00698152,
+            0.0078505,
+            -2.60610638
+            
+          ]
+        ],
+        "rotation": 0,
+        "id": 2,
+        "name": "USB Camera-B4.09.24.1 (usb-0000:00:14.0-7.1):",
+        "width": 320,
+        "height": 240,
+        "connected": true,
+        "false": true,
+        "added": true,
+        "manual_mode": 1,
+        "auto_exposure_mode": null,
+        "min_exposure": 1,
+        "max_exposure": 253,
+        "exposure": 253,
+        "gain": 63
+      },
+      {
+        "intrinsic_matrix": [
+          [
+            541.65770389,
+            0,
+            308.827262
+          ],
+          [
+            0,
+            541.65770389,
+            238.60679938
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "distortion_coef": [
+          [
+            -2.65134889e-01,
+            1.99110684e+00,
+            5.63204060e-03,
+            -3.26222473e-03,
+            -8.13660376e+00            
+          ]
+        ],
+        "rotation": 0,
+        "id": 3,
+        "name": "USB Camera-B4.09.24.1 (usb-0000:00:14.0-7.2):",
+        "width": 320,
+        "height": 240,
+        "connected": true,
+        "false": true,
+        "added": true,
+        "manual_mode": 1,
+        "auto_exposure_mode": null,
+        "min_exposure": 1,
+        "max_exposure": 253,
+        "exposure": 253,
+        "gain": 63
+      },
+      {
+        "intrinsic_matrix": [
+          [
+            533.80558916,
+            0,
+            305.12721193
+          ],
+          [
+            0,
+            533.80558916,
+            257.32772018
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "distortion_coef": [
+          [
+            -4.61173050e-01,
+            4.48204414e+00,
+            -1.30168100e-02,
+            -3.11722485e-03,
+            -1.69212517e+01           
+          ]
+        ],
+        "rotation": 0,
+        "id": 4,
+        "name": "USB Camera-B4.04.27.1 (usb-0000:00:14.0-7.3):",
+        "width": 320,
+        "height": 240,
+        "connected": true,
+        "false": true,
+        "added": true,
+        "manual_mode": 1,
+        "auto_exposure_mode": null,
+        "min_exposure": 1,
+        "max_exposure": 253,
+        "exposure": 253,
+        "gain": 63
+      }
+    ],
+    "to_world_coords_matrix": [],
+    "camera_poses": [
+      {
+        "R": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "t": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "R": [
+          [
+            -0.4749996350821106,
+            0.6051050348735454,
+            -0.6389235035922121
+          ],
+          [
+            -0.4760514624821807,
+            0.43394894012545165,
+            0.764894321087936
+          ],
+          [
+            0.7401015820415728,
+            0.6674849916924597,
+            0.08193554860302404
+          ]
+        ],
+        "t": [
+          0.4386668258985612,
+          -0.5294236064927136,
+          0.69749391528377
+        ]
+      }
+    ]
+  }

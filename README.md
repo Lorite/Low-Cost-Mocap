@@ -1,5 +1,38 @@
 # Low Cost Mocap (for drones)
 
+## Lorite notes
+
+- I have added the pseyepy repository as a submodule to this repository, so that it can be used as a dependency. Make sure to run `git submodule update --init --recursive` after cloning this repository to get the submodule.
+
+### Setup steps
+
+1. Clone the repository:
+    ```
+    git clone https://github.com/mostlytoast/Low-Cost-Mocap/tree/newGUI
+    cd Low-Cost-Mocap
+    git submodule update --init --recursive
+    ```
+2. Install the dependencies:
+    ```
+    make install
+    ```
+3. Activate the virtual environment:
+    ```
+    source venv/bin/activate
+    ```
+4. Install the pseyepy submodule: (make sure you are using the Python virtual environment)
+    For the file Low-Cost-Mocap/pseyepy/pseyepy/cameras.pyx, I had to change `print nnnn` to `print(nnnn)` to make it compatible with Python 3. I also had to remove the `long` type from the `isinstance` checks.
+    ```
+    source venv/bin/activate
+    cd pseyepy
+    sudo ./../computer_code/venv/bin/python3 setup.py install
+    cd ..
+    ```
+5. Run the camera calibration app:
+    ```
+    make calib
+    ```
+
 ### An extention to a cheap open source motion capture system with improved tools and cameras
 
 ## Goal of project

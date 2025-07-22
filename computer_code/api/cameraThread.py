@@ -82,6 +82,8 @@ class MyThread(QThread):
     def run(self):
         self._running = True
         cameras = Cameras.instance()
+        print("Camera ID:", self.camera_id)
+        print(cameras.cameras)
         self.cap = cameras.cameras[self.camera_id]
         while self._running:
             with self._lock:
