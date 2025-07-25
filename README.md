@@ -4,6 +4,12 @@
 
 - I have added the pseyepy repository as a submodule to this repository, so that it can be used as a dependency. Make sure to run `git submodule update --init --recursive` after cloning this repository to get the submodule.
 
+### Before using this repository
+
+- I have tested this repository on Ubuntu 25.04 with Python 3.13.3.
+- I checked the camera streaming uisng a Linux tool called `guvcview`, which is a GUI for the `v4l2` driver. It can be installed with `sudo apt install guvcview`.
+- I calibrated the camera intrinsics using https://github.com/nbhr/pycalib. The cameras' images are very noisy and the calibration is not perfect. I copied the values to [this file](./real_lab_test_backup_before_changing_resolution.json)
+
 ### Setup steps
 
 1. Clone the repository:
@@ -12,13 +18,14 @@
     cd Low-Cost-Mocap
     git submodule update --init --recursive
     ```
-2. Install the dependencies:
+2. Create a Python 3 environment and source it:
+    ```
+    python3 -m venv venv
+    source venv/bin/activate
+    ```
+3. Install the dependencies:
     ```
     make install
-    ```
-3. Activate the virtual environment:
-    ```
-    source venv/bin/activate
     ```
 4. Install the pseyepy submodule: (make sure you are using the Python virtual environment)
     For the file Low-Cost-Mocap/pseyepy/pseyepy/cameras.pyx, I had to change `print nnnn` to `print(nnnn)` to make it compatible with Python 3. I also had to remove the `long` type from the `isinstance` checks.
@@ -32,6 +39,24 @@
     ```
     make calib
     ```
+6. Run the tracking app:
+    ```
+    make tracking
+    ```
+    1. Make sure to have the cameras calibrated first.
+    2. Click on File -> Open -> Select the camera calibration file you created in the previous step.
+    3. Click on "Start Camera Stream". You should see all the cameras streaming on the top panel.
+    4. Click on "start" next to "Collect points" to start collecting points. You should move a single infrared LED in front of the cameras to collect points. Do it fast and try to occupy all the cameras' fields of view.
+    5. Click on "stop" next to "Collect points" to stop collecting points.
+    6. Click on "calculate with n points" to calculate the camera poses. You should see the cameras' positions in the 3D view on the bottom panel.
+    7. Click on "start" next to "Acquire floor" to start acquiring the floor plane. You should see the floor plane in the 3D view on the bottom panel.
+    8. Click on "stop" next to "Acquire floor" to stop acquiring the floor plane.
+    9. Click on "start" next to "set origin" to set the origin of the coordinate system. You should see the origin in the 3D view on the bottom panel.
+    10. Click on "Live triangulation" to start live triangulation. You should see the points being triangulated in the 3D view on the bottom panel.
+    11. Click on "File -> Save as" to save the configuration file. This file can be used to load the camera poses and floor plane in the tracking app the next time you run it (if the cameras are in the same position).
+
+    > **Note**  
+    > The Camera Controls don't seem to work properly...
 
 ### An extention to a cheap open source motion capture system with improved tools and cameras
 

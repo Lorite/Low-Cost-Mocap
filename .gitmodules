@@ -1,3 +1,3 @@
 [submodule "pseyepy"]
 	path = pseyepy
-	url = git@github.com:bensondaled/pseyepy.git
+	url = https://github.com/bensondaled/pseyepy.git

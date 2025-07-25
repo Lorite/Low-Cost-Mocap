@@ -6,16 +6,6 @@ if [ "$(basename "$PWD")" != "computer_code" ]; then
     exit 1
 fi
 
-# Check if virtual environment exists
-if [ -d "venv" ]; then
-    echo "Using existing virtual environment."
-else
-    echo "Creating new virtual environment."
-    python3 -m venv venv
-fi
-
-# Activate the virtual environment
-source venv/bin/activate
 # Function to check and install a package if not present
 install_if_missing() {
     local pkg="$1"
@@ -46,9 +36,28 @@ install_if_missing() {
     fi
 }
 
+install_if_missing python3 python3-venv python3-pip
+
+# Check if virtual environment exists
+if [ -d "venv" ]; then
+    echo "Using existing virtual environment."
+else
+    echo "Creating new virtual environment."
+    python3 -m venv venv
+fi
+
+# Activate the virtual environment
+source venv/bin/activate
+
+
 # install ffmpeg
 install_if_missing ffmpeg ffmpeg
 
+# install PyQt6 dependency
+install_if_missing libxcb-xinerama0 libxcb-cursor0
+
+# install OpenGL dependencies
+install_if_missing freeglut3-dev
 
 # install v4l2
 #TODO install mac/windows alternatives based on system version 

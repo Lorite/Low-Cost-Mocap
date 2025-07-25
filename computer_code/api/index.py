@@ -72,9 +72,6 @@ class MyThread(QThread):
           
         # TODO return fps
         return gen(cameras)
-
-
-
  
     def acquire_floor(self,object_points):
         cameras = Cameras.instance()

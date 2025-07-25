@@ -31,7 +31,12 @@ def listWebcams():
                 device_id = int(device_id_str)
                 output.append([line, device_id])
                 # should this include the id of the camera? this could change immediately after running this code
-    # todo get working for macos
+    # todo get working for windows
+    else: # assume the cameras are pseyepy cameras
+        from pseyepy import Camera as PSEyeCamera
+        self.cameras = PSEyeCamera(fps=60, resolution=PSEyeCamera.RES_SMALL, gain=34, exposure=100)
+        # TODO ...............
+        
     return output
 
 
